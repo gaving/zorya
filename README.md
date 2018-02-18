@@ -36,9 +36,8 @@ docker run -e NEO4J_AUTH=none \
   --name neo4j \
   --publish=7474:7474 \
   --publish=7687:7687 \
-  -v ./data:/data \
-  -v ./import:/var/lib/neo4j/import \
-  -v ./plugins:/plugins \
-  -v ./conf:/var/lib/neo4j/conf \
+  -v $PWD/data:/data \
+  -v $PWD/import:/var/lib/neo4j/import \
+  -v $PWD/plugins:/plugins \
   neo4j
 ```

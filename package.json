@@ -1,0 +1,12 @@
+{
+  "name": "graph-transcript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "node-webvtt": "^1.0.3",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2",
+    "youtube-dl": "^1.12.2"
+  }
+}

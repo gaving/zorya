@@ -34,15 +34,34 @@
 
 
 CALL apoc.periodic.iterate("
-    CALL apoc.load.json('file:///ner.json')
+    CALL apoc.load.json('file:///var/lib/neo4j/import/ObpgbpRraeU_ner.json')
     YIELD value AS parsedResponse RETURN parsedResponse
 ", "
 MERGE (v:Video {ref: parsedResponse.ref}) 
 
 FOREACH(entity IN parsedResponse.entities |
+
     // Person
     FOREACH(_ IN CASE WHEN entity.type = 'PERSON' THEN [1] ELSE [] END |
         MERGE (p:Person {name: entity.text})
+        MERGE (p)-[:REFERENCES{start: entity.start, end: entity.end}]->(v)
+    )
+
+    // NORP
+    FOREACH(_ IN CASE WHEN entity.type = 'NORP' THEN [1] ELSE [] END |
+        MERGE (p:NORP {name: entity.text})
+        MERGE (p)-[:REFERENCES{start: entity.start, end: entity.end}]->(v)
+    )
+
+    // GPE
+    FOREACH(_ IN CASE WHEN entity.type = 'GPE' THEN [1] ELSE [] END |
+        MERGE (p:GPE {name: entity.text})
+        MERGE (p)-[:REFERENCES{start: entity.start, end: entity.end}]->(v)
+    )
+
+    // ORG
+    FOREACH(_ IN CASE WHEN entity.type = 'ORG' THEN [1] ELSE [] END |
+        MERGE (p:ORG {name: entity.text})
         MERGE (p)-[:REFERENCES{start: entity.start, end: entity.end}]->(v)
     )
 )",
