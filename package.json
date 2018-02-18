@@ -13,6 +13,7 @@
     "cors": "^2.8.4",
     "express": "^4.16.2",
     "morgan": "^1.9.0",
+    "neo4j-driver": "^1.5.3",
     "node-webvtt-youtube": "https://github.com/acorn421/node-webvtt-youtube#master",
     "nodemon": "^1.11.0",
     "request": "^2.83.0",

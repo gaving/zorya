@@ -1,6 +1,5 @@
 import express from "express";
-import transcript from "../lib/transcript";
-import ner from "../lib/ner";
+import { transcript, ner, neo } from "../lib/";
 
 const router = express.Router();
 
@@ -9,7 +8,8 @@ router.post("/new", async (req, res) => {
   try {
     const cues = await transcript(video);
     const entities = await ner(cues);
-    res.send(entities);
+    const done = await neo(video, entities);
+    res.send(done);
   } catch (error) {
     console.log(error);
     res.send(error);
