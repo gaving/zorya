@@ -14,14 +14,12 @@
     "dotenv": "^5.0.0",
     "express": "^4.16.2",
     "express-async-handler": "^1.0.3",
-    "express-winston": "^2.5.0",
     "morgan": "^1.9.0",
     "neo4j-driver": "^1.5.3",
     "node-webvtt-youtube": "https://github.com/acorn421/node-webvtt-youtube#master",
     "nodemon": "^1.11.0",
     "request": "^2.83.0",
     "request-promise": "^4.2.2",
-    "winston": "^2.4.0",
     "youtube-dl": "^1.12.2"
   },
   "scripts": {

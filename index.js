@@ -1,8 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
-import winston from "winston";
-import expressWinston from "express-winston";
+import morgan from "morgan";
 import dotenv from "dotenv";
 import videos from "./routes/video.route";
 
@@ -15,21 +14,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use("/videos", videos);
-
-app.use(
-  expressWinston.logger({
-    transports: [
-      new winston.transports.Console({
-        json: true,
-        colorize: true
-      })
-    ],
-    meta: true,
-    msg: "HTTP {{req.method}} {{req.url}}",
-    expressFormat: true,
-    colorize: true
-  })
-);
+app.use(morgan("combined"));
 
 app.get("/", (req, res) => {
   res.send("Invalid endpoint!");
