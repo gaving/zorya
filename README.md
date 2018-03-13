@@ -2,7 +2,7 @@
 
 Tool for visualizing named entities from a YouTube video.
 
-![](https://raw.githubusercontent.com/gaving/graph-transcript/master/site/1.svg)
+![](https://raw.githubusercontent.com/gaving/graph-transcript/master/site/1.png)
 
 ## Installation
 
