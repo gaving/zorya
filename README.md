@@ -1,8 +1,8 @@
 # Graph Transcript
 
-Tool for visualizing named entities from a Youtube video.
+Tool for visualizing named entities from a YouTube video.
 
-![](https://raw.githubusercontent.com/gaving/graph-transcript/site/1.pn)
+![](https://raw.githubusercontent.com/gaving/graph-transcript/site/1.svg)
 
 ## Installation
 
