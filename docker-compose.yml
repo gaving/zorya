@@ -1,0 +1,23 @@
+version: "3"
+services:
+  zorya:
+    build:
+      context: .
+    ports:
+      - 3000:3000
+    depends_on:
+      - spacyapi
+      - neo4j
+    environment:
+      - PORT=3000
+      - NEO4J_URI=http://neo4j:7474/
+      - SPACY_URI=http://spacyapi/
+  spacyapi:
+    image: jgontrum/spacyapi:en_v2
+  neo4j:
+    image: neo4j:latest
+    ports:
+      - 7474:7474
+      - 7687:7687
+    environment:
+      - NEO4J_AUTH=none

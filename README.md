@@ -1,31 +1,18 @@
-# Graph Transcript
+# Zorya
 
 Tool for visualizing named entities from a YouTube video.
 
-![](https://raw.githubusercontent.com/gaving/graph-transcript/master/site/1.png)
+![](https://raw.githubusercontent.com/gaving/zorya/master/site/1.png)
 
-## Installation
+## Run
 
-### Run Services
-
-#### Spacy
-
-`docker run -p 8080:80 jgontrum/spacyapi:en_v2`
-
-#### Neo4j
-
-`docker run -e NEO4J_AUTH=none --rm --name graph-transcript --publish=7474:7474 --publish=7687:7687 neo4j`
-
-### Run Service
-
-* `yarn`
-* `yarn start`
+`docker-compose up`
 
 ### Usage
 
-* `http POST :3000/videos/new video=<video id>`
+- `http POST :3000/videos/new video=uwbpcTrsmaI`
 
-```
+```json
 HTTP/1.1 200 OK
 Access-Control-Allow-Origin: *
 Connection: keep-alive
@@ -36,15 +23,8 @@ ETag: W/"20-vNuP419kHmtKc9Kq9n9yXAUsw4g"
 X-Powered-By: Express
 
 {
-    "message": "c0jPryEaR3w queued"
+    "message": "uwbpcTrsmaI queued"
 }
 ```
 
-* View in Neo4j
-
-## Overview
-
-* Download youtube transcripts with youtube-dl getSubs()
-* Convert VTT file into JSON
-* NLP VTT file with spacy
-* Load NLP data into Neo4j instance (time data on the relationships not the nodes)
+- Launch http://localhost:7474/
