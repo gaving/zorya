@@ -1,14 +1,11 @@
 {
   "name": "zorya",
+  "author": "Gavin Gilmour <gavin.gilmour@gmail.com>",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "license": "MIT",
   "dependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-plugin-transform-async-generator-functions": "^6.24.1",
-    "babel-plugin-transform-object-rest-spread": "^6.23.0",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-latest": "^6.23.0",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
@@ -22,7 +19,7 @@
     "youtube-dl": "^1.13.1"
   },
   "scripts": {
-    "start": "nodemon ./index.js --exec babel-node -e js",
+    "start": "nodemon -- --experimental-modules index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

@@ -1,7 +1,7 @@
 import express from "express";
 import asyncHandler from "express-async-handler";
 
-import { transcript, ner, neo } from "../lib/";
+import { transcript, ner, neo } from "../lib/index.js";
 
 const router = express.Router();
 
