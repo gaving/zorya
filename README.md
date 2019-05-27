@@ -2,7 +2,7 @@
 
 Visualize entities for a YouTube video.
 
-![](https://raw.githubusercontent.com/gaving/zorya/master/site/1.png)
+![screenshot](https://raw.githubusercontent.com/gaving/zorya/master/site/1.png)
 
 ## Run
 
@@ -27,4 +27,4 @@ X-Powered-By: Express
 }
 ```
 
-- Launch http://localhost:7474/
+- Launch [](http://localhost:7474/)

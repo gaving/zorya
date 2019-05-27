@@ -2,8 +2,11 @@ import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
 import morgan from "morgan";
+import Debug from "debug";
+
 import videos from "./routes/video.route.js";
 
+const debug = Debug("zorya");
 const app = express();
 
 app.use(cors());
@@ -18,5 +21,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(process.env.PORT, () => {
-  console.info(`Listening on ${process.env.PORT}`);
+  debug(`Listening on ${process.env.PORT}`);
 });
