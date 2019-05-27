@@ -27,4 +27,4 @@ X-Powered-By: Express
 }
 ```
 
-- Launch [](http://localhost:7474/)
+- Launch [http://localhost:7474/](http://localhost:7474/)
