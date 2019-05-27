@@ -1,6 +1,6 @@
 # Zorya
 
-Tool for visualizing named entities from a YouTube video.
+Visualize entities for a YouTube video.
 
 ![](https://raw.githubusercontent.com/gaving/zorya/master/site/1.png)
 
