@@ -9,7 +9,7 @@
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "debug": "^4.1.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-async-handler": "^1.1.4",
     "morgan": "^1.9.1",
     "neo4j-driver": "^1.7.5",
